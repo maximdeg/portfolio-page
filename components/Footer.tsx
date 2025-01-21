@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -14,65 +15,31 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center justify-center space-x-8">
-            <a
-              href="#"
-              className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+            <Link
+              href="https://www.linkedin.com/in/maxim-degtiarev"
+              className="w-20 h-20 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <i
-                data-feather="twitter"
-                className="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500"
-              ></i>
-            </a>
+              <img
+                src="https://res.cloudinary.com/djdnlogf1/image/upload/v1734111395/image-10_hvmuhb.png"
+                alt="Linked In Logo"
+                className="object-scale-down"
+              />
+            </Link>
 
-            <a
-              href="#"
-              className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+            <Link
+              href="https://github.com/maximdeg"
+              className="w-20 h-20 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              <i
-                data-feather="dribbble"
-                className="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
-              ></i>
-            </a>
-
-            <a
-              href="#"
-              className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
-            >
-              <i
-                data-feather="facebook"
-                className="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
-              ></i>
-            </a>
-
-            <a
-              href="#"
-              className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
-            >
-              <i
-                data-feather="codepen"
-                className="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
-              ></i>
-            </a>
-
-            <a
-              href="#"
-              className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
-            >
-              <i
-                data-feather="at-sign"
-                className="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
-              ></i>
-            </a>
-
-            <a
-              href="#"
-              className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
-            >
-              <i
-                data-feather="instagram"
-                className="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
-              ></i>
-            </a>
+              <img
+                src="https://res.cloudinary.com/djdnlogf1/image/upload/v1734111845/github-logo_cy33sg.png"
+                alt="Github Logo"
+                className="object-scale-down"
+              />
+            </Link>
           </div>
         </div>
       </div>

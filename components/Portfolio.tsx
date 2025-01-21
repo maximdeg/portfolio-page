@@ -22,7 +22,7 @@ const Portfolio = () => {
               <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
                 <img
                   className="w-full object-cover"
-                  src="/ycdirectory.png"
+                  src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/ycdirectory_lwzasu.png"
                   alt="My Image"
                 />
               </div>
@@ -62,7 +62,7 @@ const Portfolio = () => {
                 >
                   <img
                     className="w-full object-cover h-full"
-                    src="/bancax.png"
+                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475215/bancax_ybo6xo.png"
                     alt="My Image"
                   />
                 </Link>
@@ -104,7 +104,7 @@ const Portfolio = () => {
                 >
                   <img
                     className="w-full object-contain"
-                    src="/slack.png"
+                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/slack_y5oila.png"
                     alt="My Image"
                   />
                 </Link>
@@ -143,7 +143,7 @@ const Portfolio = () => {
                 >
                   <img
                     className="w-full object-cover"
-                    src="/natourex.png"
+                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475215/natourex_qeaqao.png"
                     alt="My Image"
                   />
                 </Link>
