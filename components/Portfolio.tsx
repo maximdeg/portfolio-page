@@ -19,24 +19,17 @@ const Portfolio = () => {
 
           <div className="space-y-24">
             <div className="flex space-x-6">
-              <div className="w-124 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500">
-                <Link
-                  href="https://bancax.vercel.app"
-                  className="cursor-pointer"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    className="w-full object-cover"
-                    src="/ycdirectory.png"
-                    alt="My Image"
-                  />
-                </Link>
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
+                <img
+                  className="w-full object-cover"
+                  src="/ycdirectory.png"
+                  alt="My Image"
+                />
               </div>
 
-              <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
+              <span className="w-1/12 h-0.5 bg-gray-300 mt-5"></span>
 
-              <div>
+              <div className="w-5/12">
                 <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
                   StartMaxUp
                 </h1>
@@ -60,7 +53,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="flex space-x-6">
-              <div className="w-full h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
                 <Link
                   href="https://bancax.vercel.app"
                   className="cursor-pointer"
@@ -68,16 +61,16 @@ const Portfolio = () => {
                   target="_blank"
                 >
                   <img
-                    className="w-full object-contain h-full"
+                    className="w-full object-cover h-full"
                     src="/bancax.png"
                     alt="My Image"
                   />
                 </Link>
               </div>
 
-              <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
+              <span className="w-1/12 h-0.5 bg-gray-300 mt-5"></span>
 
-              <div>
+              <div className="w-5/12">
                 <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
                   Bancax
                 </h1>
@@ -102,7 +95,7 @@ const Portfolio = () => {
             </div>
 
             <div className="flex space-x-6">
-              <div className="w-full h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
                 <Link
                   href="https://slack-clone-macks-v2.vercel.app/"
                   className="cursor-pointer"
@@ -117,9 +110,9 @@ const Portfolio = () => {
                 </Link>
               </div>
 
-              <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
+              <span className="w-1/12 h-0.5 bg-gray-300 mt-5"></span>
 
-              <div>
+              <div className="w-5/12">
                 <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
                   Slack Clone
                 </h1>
@@ -141,7 +134,7 @@ const Portfolio = () => {
             </div>
 
             <div className="flex space-x-6">
-              <div className="w-124 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500">
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
                 <Link
                   href="https://notourex.onrender.com/"
                   className="cursor-pointer"
@@ -156,9 +149,9 @@ const Portfolio = () => {
                 </Link>
               </div>
 
-              <span className="w-28 h-0.5 bg-gray-300 mt-5"></span>
+              <span className="w-1/12 h-0.5 bg-gray-300 mt-5"></span>
 
-              <div>
+              <div className="w-5/12">
                 <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
                   Natourex
                 </h1>
