@@ -24,8 +24,8 @@ const AboutMe = () => {
                   I can design your website from scratch. I create modern,
                   simple, and user- friendly designs that match your brand and
                   goals. I can also help you with your ready-made design.
-                  Whether it's a landing page or a business card website, I will
-                  make it look great and work smoothly on any device.
+                  Whether it&apos;s a landing page or a business card website, I
+                  will make it look great and work smoothly on any device.
                 </p>
               </div>
             </div>

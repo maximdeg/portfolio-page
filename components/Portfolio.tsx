@@ -33,7 +33,7 @@ const Portfolio = () => {
                 <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
                   StartMaxUp
                 </h1>
-                <h6>StartUp's Directory</h6>
+                <h6>StartUp&apos;s Directory</h6>
 
                 <p className="font-normal text-gray-500 text-sm md:text-base">
                   A web application built on a RESTful API architecture to
