@@ -31,10 +31,10 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="flex items-center justify-center p-6 mt-14 pt-36 lg:mt-0 h-70 sm:h-112 lg:h-96 xl:h-112 2xl:h-128">
-          <div className="w-full mt-11 pt-11">
+        <div className="flex items-center justify-center p-6 mt-14 pt-16 h-70 sm:h-112 lg:h-96 xl:h-112 2xl:h-128 ">
+          <div className="w-full mt-11 pt-8 ">
             <img
-              className=" z-10 rounded-full lg:max-w-[50%] max-w-[40%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
+              className=" z-10 rounded-full lg:max-w-[40%] max-w-[40%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
               src="/max.jpg"
               alt="My Image"
             />
