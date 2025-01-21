@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="pr-10 pl-10 mr-11 ml-11" id="hero">
+    <section className="pr-10 pl-10 mr-11 ml-11 mt-5" id="hero">
       <div className="container flex flex-col justify-center p-3 mx-auto sm:py-12 lg:py-15 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <p className="text-lg mb-3 sm:mb-4">

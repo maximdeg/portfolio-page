@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="flex items-center justify-center space-x-8">
             <Link
               href="https://www.linkedin.com/in/maxim-degtiarev"
-              className="w-20 h-20 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+              className="w-20 h-20 flex items-center justify-center rounded-full overflow-hidden hover:bg-gray-200 transition ease-in-out duration-500"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -30,14 +30,14 @@ const Footer = () => {
 
             <Link
               href="https://github.com/maximdeg"
-              className="w-20 h-20 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+              className="w-20 h-20 flex items-center justify-center rounded-full bg-white overflow-hidden hover:bg-gray-200 transition ease-in-out duration-500"
               rel="noopener noreferrer"
               target="_blank"
             >
               <img
                 src="https://res.cloudinary.com/djdnlogf1/image/upload/v1734111845/github-logo_cy33sg.png"
                 alt="Github Logo"
-                className="object-scale-down"
+                className="object-scale-down "
               />
             </Link>
           </div>
