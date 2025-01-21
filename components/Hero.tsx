@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="pr-10 pl-10 mr-11 ml-11 mt-5" id="hero">
+    <section className="pr-10 pl-10 mr-11 ml-11" id="hero">
       <div className="container flex flex-col justify-center p-3 mx-auto sm:py-12 lg:py-15 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <p className="text-lg mb-3 sm:mb-4">
@@ -31,8 +31,8 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="flex items-center justify-center p-6 mt-11 pt-11 lg:mt-0 h-70 sm:h-112 lg:h-96 xl:h-112 2xl:h-128">
-          <div className="w-full mt-11 pt-22">
+        <div className="flex items-center justify-center p-6 mt-14 pt-36 lg:mt-0 h-70 sm:h-112 lg:h-96 xl:h-112 2xl:h-128">
+          <div className="w-full mt-11 pt-11">
             <img
               className=" z-10 rounded-full lg:max-w-[50%] max-w-[40%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
               src="/max.jpg"
