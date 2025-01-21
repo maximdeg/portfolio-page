@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex items-center justify-center p-6 mt-11 pt-11 lg:mt-0 h-70 sm:h-112 lg:h-96 xl:h-112 2xl:h-128">
-          <div className="w-full mt-11 pt-11">
+          <div className="w-full mt-11 pt-22">
             <img
               className=" z-10 rounded-full lg:max-w-[50%] max-w-[40%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
               src="/max.jpg"
