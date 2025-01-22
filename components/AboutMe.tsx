@@ -12,9 +12,9 @@ const AboutMe = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="mx-auto flex  items-center justify-center ">
-            <div className="w-full rounded-md bg-gradient-to-r from-violet-600 via-blue-500 to-blue-300 p-1">
+            <div className="w-full rounded-md bg-gradient-to-r from-violet-600 via-blue-500 to-blue-300 p-1 hover:scale-110 ease-in-out duration-300">
               <div className="flex h-full w-full flex-col items-center justify-center px-8 py-10 bg-gray-800 back">
-                <div className="py-6 px-6 flex justify-center rounded-md mb-4 border-2 border-gray-900">
+                <div className="py-6 px-6 flex justify-center rounded-md mb-4 border-2 border-gray-900 hover:text-black hover:bg-white hover:border-3 hover:border-violet-600 ease-in-out duration-200">
                   <PiDevicesBold className="w-12 h-12" />
                 </div>
                 <h4 className="font-medium text-blue-500 text-lg mb-4">
@@ -32,10 +32,10 @@ const AboutMe = () => {
           </div>
 
           <div className="mx-auto flex  items-center justify-center ">
-            <div className="w-full rounded-md bg-gradient-to-r from-violet-600 via-blue-500 to-blue-300 p-1">
+            <div className="w-full rounded-md bg-gradient-to-r from-violet-600 via-blue-500 to-blue-300 p-1 hover:scale-110 ease-in-out duration-300">
               <div className="flex h-full w-full flex-col items-center justify-center px-8 py-10 bg-gray-800 back">
-                <div className="py-6 px-6 flex justify-center rounded-md mb-4 border-2 border-gray-900">
-                  <FiCodesandbox className="w-12 h-12 hover:text-black hover:bg-white" />
+                <div className="py-6 px-6 flex justify-center rounded-md mb-4 border-2 border-gray-900 hover:text-black hover:bg-white hover:border-3 hover:border-violet-600 ease-in-out duration-200">
+                  <FiCodesandbox className="w-12 h-12" />
                 </div>
                 <h4 className="font-medium text-blue-500 text-lg mb-4">
                   Mobile App Development
@@ -52,9 +52,9 @@ const AboutMe = () => {
           </div>
 
           <div className="mx-auto flex  items-center justify-center ">
-            <div className="w-full rounded-md bg-gradient-to-r from-violet-600 via-blue-500 to-blue-300 p-1">
+            <div className="w-full rounded-md bg-gradient-to-r from-violet-600 via-blue-500 to-blue-300 p-1 hover:scale-110 ease-in-out duration-300">
               <div className="flex h-full w-full flex-col items-center justify-center px-8 py-10 bg-gray-800 back">
-                <div className="py-6 px-6 flex justify-center rounded-md mb-4 border-2 border-gray-900">
+                <div className="py-6 px-6 flex justify-center rounded-md mb-4 border-2 border-gray-900 hover:text-black hover:bg-white hover:border-3 hover:border-violet-600 ease-in-out duration-200">
                   <TbApi className="w-12 h-12" />
                 </div>
                 <h4 className="font-medium text-blue-500 text-lg mb-4">

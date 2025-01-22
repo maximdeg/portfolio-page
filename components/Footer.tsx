@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -17,27 +18,31 @@ const Footer = () => {
           <div className="flex items-center justify-center space-x-8">
             <Link
               href="https://www.linkedin.com/in/maxim-degtiarev"
-              className="w-20 h-20 flex items-center justify-center rounded-full overflow-hidden hover:bg-gray-200 transition ease-in-out duration-500"
+              className="w-20 h-20 flex items-center justify-center rounded-full bg-white overflow-hidden hover:bg-violet-800 transition ease-in-out duration-500"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/djdnlogf1/image/upload/v1734111395/image-10_hvmuhb.png"
                 alt="Linked In Logo"
                 className="object-scale-down"
+                width={50}
+                height={50}
               />
             </Link>
 
             <Link
               href="https://github.com/maximdeg"
-              className="w-20 h-20 flex items-center justify-center rounded-full bg-white overflow-hidden hover:bg-gray-200 transition ease-in-out duration-500"
+              className="w-20 h-20 flex items-center justify-center rounded-full bg-white overflow-hidden hover:bg-violet-800 transition ease-in-out duration-500"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/djdnlogf1/image/upload/v1734111845/github-logo_cy33sg.png"
                 alt="Github Logo"
                 className="object-scale-down "
+                width={60}
+                height={60}
               />
             </Link>
           </div>

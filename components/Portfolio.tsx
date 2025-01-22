@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Portfolio = () => {
   return (
@@ -19,11 +20,13 @@ const Portfolio = () => {
 
           <div className="space-y-24">
             <div className="flex space-x-6">
-              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
-                <img
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden  hover:scale-125 ease-in-out duration-300">
+                <Image
                   className="w-full object-cover"
                   src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/ycdirectory_lwzasu.png"
-                  alt="My Image"
+                  alt="YCDirectory Next.js Course"
+                  width={600}
+                  height={400}
                 />
               </div>
 
@@ -53,17 +56,19 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="flex space-x-6">
-              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden  hover:scale-125 ease-in-out duration-300">
                 <Link
                   href="https://bancax.vercel.app"
                   className="cursor-pointer"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <img
+                  <Image
                     className="w-full object-cover h-full"
                     src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475215/bancax_ybo6xo.png"
-                    alt="My Image"
+                    alt="Bancax website By Maxim Degtiarev"
+                    width={600}
+                  height={400}
                   />
                 </Link>
               </div>
@@ -95,17 +100,19 @@ const Portfolio = () => {
             </div>
 
             <div className="flex space-x-6">
-              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden  hover:scale-125 ease-in-out duration-300">
                 <Link
                   href="https://slack-clone-macks-v2.vercel.app/"
                   className="cursor-pointer"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <img
+                  <Image
                     className="w-full object-contain"
                     src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/slack_y5oila.png"
-                    alt="My Image"
+                    alt="Slack Clone By Macks"
+                    width={600}
+                  height={400}
                   />
                 </Link>
               </div>
@@ -134,17 +141,19 @@ const Portfolio = () => {
             </div>
 
             <div className="flex space-x-6">
-              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden">
+              <div className="w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden hover:scale-125 ease-in-out duration-300">
                 <Link
                   href="https://notourex.onrender.com/"
                   className="cursor-pointer"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <img
+                  <Image
                     className="w-full object-contain"
                     src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737561821/natourex_cjd61s.png"
-                    alt="My Image"
+                    alt="Natourex by Maxim Degtiarev"
+                    width={600}
+                  height={400}
                   />
                 </Link>
               </div>
