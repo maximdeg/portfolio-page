@@ -3,8 +3,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="pr-10 pl-10 mr-11 ml-11" id="hero">
-      <div className="container flex flex-col justify-center p-3 mx-auto sm:py-12 lg:py-15 lg:flex-row lg:justify-between">
+    <section id="hero">
+      <div className="container flex flex-col justify-center mx-auto px-10 sm:py-12 lg:py-15 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <p className="text-lg mb-3 sm:mb-4">
             Hi👋! My name is Maxim Degtiarev
@@ -31,10 +31,10 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="flex items-center justify-center p-6 mt-14 pt-16 h-70 sm:h-112 lg:h-96 xl:h-112 2xl:h-128 ">
-          <div className="w-full mt-11 pt-8 ">
+        <div className="flex items-center justify-center px-6 lg:mt-0 ">
+          <div className=" w-full mt-11 pt-8">
             <img
-              className=" z-10 rounded-full lg:max-w-[40%] max-w-[40%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
+              className=" z-10 rounded-full sm:max-w-[75%] md:max-w-[70%] lg:max-w-[50%] max-w-[60%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
               src="/max.jpg"
               alt="My Image"
             />
