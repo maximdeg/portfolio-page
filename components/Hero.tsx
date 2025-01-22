@@ -35,11 +35,11 @@ const Hero = () => {
         <div className="flex items-center justify-center px-6 lg:mt-0 ">
           <div className=" w-full mt-11 pt-8">
             <Image
-              className=" z-10 rounded-full sm:max-w-[75%] md:max-w-[70%] lg:max-w-[50%] max-w-[60%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
-              src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737568297/DSC_4745_shzvhz.jpg"
+              className=" z-10 rounded-full sm:max-w-[75%] md:max-w-[70%] lg:max-w-[75%] max-w-[60%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
+              src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737571666/DSC_4745b_uvkqyq.jpg"
               alt="Maxim Degtiarev"
-              width={600}
-              height={600}
+              width={1300}
+              height={1300}
             />
           </div>
         </div>
