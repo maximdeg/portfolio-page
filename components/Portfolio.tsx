@@ -143,7 +143,7 @@ const Portfolio = () => {
                 >
                   <img
                     className="w-full object-contain"
-                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475215/natourex_qeaqao.png"
+                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737561821/natourex_cjd61s.png"
                     alt="My Image"
                   />
                 </Link>
