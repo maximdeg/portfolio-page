@@ -36,7 +36,7 @@ const Hero = () => {
           <div className=" w-full mt-11 pt-8">
             <Image
               className=" z-10 rounded-full sm:max-w-[75%] md:max-w-[70%] lg:max-w-[75%] max-w-[60%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
-              src="https://res.cloudinary.com/djdnlogf1/image/upload/v1745869075/DSC_9968-11e_hthnue.jpg"
+              src="https://res.cloudinary.com/djdnlogf1/image/upload/v1745878815/DSC_9974-12_zqvpfd.jpg"
               alt="Maxim Degtiarev"
               width={1300}
               height={1300}
