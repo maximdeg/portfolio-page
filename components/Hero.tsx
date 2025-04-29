@@ -14,7 +14,7 @@ const Hero = () => {
             Full Stack <span className="dark:text-violet-600">Developer</span>
           </h1>
           <p className="mt-2 mb-2 text-lg sm:mb-12">
-            Experienced full-stack developer with 3+ years of expertise in
+            Experienced full-stack developer with 2+ years of expertise in
             Next.js, MERN Stack, and some React Native experience.
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
