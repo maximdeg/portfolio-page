@@ -1,10 +1,17 @@
 import "./globals.css";
 import { Oxanium } from "next/font/google";
+import { Metadata } from "next";
+import Head from "next/head";
 
 const oxaniumFont = Oxanium({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
+
+export const metadata: Metadata = {
+  title: "Maxim Degtiarev | Portfolio",
+  description: "Software Developer | Web Designer",
+};
 
 export default function RootLayout({
   children,
@@ -13,6 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>Maxim Degtiarev | Portfolio</title>
+        <meta name="robots" content="all" />
+        <meta name="description" content="" key="desc" />
+      </Head>
       <body className={oxaniumFont.className}>{children}</body>
     </html>
   );

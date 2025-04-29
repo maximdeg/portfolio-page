@@ -2,7 +2,7 @@ import React from "react";
 
 const TechStack = () => {
   return (
-    <section className="py-10 md:py-16" id="tech-stack">
+    <section className="py-10 h-[70%] md:py-16 pb-10 mb-15" id="tech-stack">
       <div className="container max-w-screen-xl mx-auto px-4">
         <h1 className="font-medium text-violet-600 text-3xl md:text-5xl mb-5">
           Tech Stack
@@ -12,7 +12,7 @@ const TechStack = () => {
           Below is a summary of the technologies I have worked with.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-11 w-full gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-1 md:p-11 w-full gap-8 items-center justify-items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             enableBackground="new 0 0 128 128"
@@ -389,7 +389,7 @@ const TechStack = () => {
           <img
             src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475192/next-js-icon-2048x1234-85gmuivx_yzamuq.png"
             alt="Image"
-            className="w-40 h-24 col-span-3 bg-slate-900 border-8 border-slate-900 rounded-md hover:scale-125 ease-in-out duration-300"
+            className="w-40 h-24 col-span-3 bg-[#1A1A1A] border-8 border-[#1A1A1A] rounded-md hover:scale-125 ease-in-out duration-300"
           />
         </div>
       </div>
