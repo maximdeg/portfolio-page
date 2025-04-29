@@ -14,7 +14,7 @@ const Hero = () => {
             Full Stack <span className="dark:text-violet-600">Developer</span>
           </h1>
           <p className="mt-2 mb-2 text-lg sm:mb-12">
-            Experienced full-stack developer with 3+ years of expertise in
+            Experienced full-stack developer with 2+ years of expertise in
             Next.js, MERN Stack, and some React Native experience.
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
@@ -36,7 +36,7 @@ const Hero = () => {
           <div className=" w-full mt-11 pt-8">
             <Image
               className=" z-10 rounded-full sm:max-w-[75%] md:max-w-[70%] lg:max-w-[75%] max-w-[60%] mx-auto outline outline-[.7rem] outline-offset-[.1rem] outline-violet-600"
-              src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737571666/DSC_4745b_uvkqyq.jpg"
+              src="https://res.cloudinary.com/djdnlogf1/image/upload/v1745878815/DSC_9974-12_zqvpfd.jpg"
               alt="Maxim Degtiarev"
               width={1300}
               height={1300}
