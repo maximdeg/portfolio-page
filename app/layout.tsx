@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Oxanium } from "next/font/google";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import Head from "next/head";
 
 const oxaniumFont = Oxanium({
@@ -25,7 +26,10 @@ export default function RootLayout({
         <meta name="robots" content="all" />
         <meta name="description" content="" key="desc" />
       </Head>
-      <body className={oxaniumFont.className}>{children}</body>
+      <body className={oxaniumFont.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
