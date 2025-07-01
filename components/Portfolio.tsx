@@ -140,7 +140,7 @@ const Portfolio = () => {
             projectsVisible ? 'scroll-stagger visible' : 'scroll-stagger'
           }`}
         >
-          {filteredWorks.map((work, index) => (
+          {filteredWorks.map((work) => (
             <div
               key={work.title}
               className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift"
@@ -249,10 +249,13 @@ const Portfolio = () => {
               Have a project in mind?
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Let's work together to bring your ideas to life. I'm always excited to take on new challenges and create amazing digital experiences.
+              I&apos;m passionate about creating innovative web solutions that deliver exceptional user experiences.
+            </p>
+            <p className="text-gray-600 dark:text-gray-300">
+              Let&apos;s work together to bring your ideas to life!
             </p>
             <Link href="#footer" className="btn-primary inline-flex items-center">
-              Let's Talk
+              Let&apos;s Talk
               <HiExternalLink className="w-4 h-4 ml-2" />
             </Link>
           </div>

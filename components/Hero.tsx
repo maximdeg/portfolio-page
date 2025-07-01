@@ -2,18 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HiArrowDown, HiDownload } from "react-icons/hi";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const { elementRef: textRef, isVisible: textVisible } = useScrollAnimation<HTMLDivElement>();
   const { elementRef: imageRef, isVisible: imageVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.3 });
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 mt-16 sm:mt-0">

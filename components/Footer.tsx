@@ -153,10 +153,13 @@ const Footer = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Let's connect
+                Let&apos;s connect
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
-                I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Let&apos;s work together to bring your ideas to life.
+              </p>
+              <p className="text-gray-600 dark:text-gray-300">
+                I&apos;m always open to new opportunities and collaborations.
               </p>
             </div>
 

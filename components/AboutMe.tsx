@@ -45,8 +45,8 @@ const AboutMe = () => {
             <span className="gradient-text">My Services</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I offer comprehensive web development services to help bring your digital ideas to life. 
-            From concept to deployment, I'm here to make your vision a reality.
+            I&apos;m a passionate full-stack developer with expertise in modern web technologies. 
+            From concept to deployment, I&apos;m here to make your vision a reality.
           </p>
         </div>
 

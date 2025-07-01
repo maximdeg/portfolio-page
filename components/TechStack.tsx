@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { HiCode, HiChip, HiDatabase, HiCloud, HiDeviceMobile, HiGlobe } from "react-icons/hi";
+import React from 'react';
+import { HiDatabase, HiCloud, HiGlobe } from "react-icons/hi";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const TechStack = () => {
@@ -69,7 +69,7 @@ const TechStack = () => {
             <span className="gradient-text">Tech Stack</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here's a comprehensive overview of the technologies and tools I use to build modern, scalable applications.
+            Here&apos;s a comprehensive overview of the technologies and tools I use to build modern, scalable applications.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ const TechStack = () => {
                 {category}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {skills.map((skill, index) => (
+                {skills.map((skill) => (
                   <div
                     key={skill.name}
                     className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift"
@@ -168,9 +168,9 @@ const TechStack = () => {
                 "JavaScript", "Python", "Redux", "GraphQL", "Socket.io", "JWT",
                 "Bcrypt", "Nodemailer", "Cloudinary", "Stripe", "Jest", "Cypress",
                 "Postman", "VS Code", "GitHub", "Netlify", "Heroku", "Firebase"
-              ].map((skill, index) => (
+              ].map((skill) => (
                 <div
-                  key={index}
+                  key={skill}
                   className="bg-white dark:bg-gray-700 rounded-lg px-4 py-3 text-center hover:bg-violet-50 dark:hover:bg-violet-900/20 transition-colors duration-200"
                 >
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -194,8 +194,7 @@ const TechStack = () => {
               Always Learning
             </h3>
             <p className="text-violet-100 mb-6 max-w-2xl mx-auto">
-              I'm constantly expanding my skillset and staying up-to-date with the latest technologies. 
-              Currently exploring advanced topics in cloud architecture, machine learning integration, and performance optimization.
+              I&apos;m constantly learning and staying up-to-date with the latest technologies and best practices.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
