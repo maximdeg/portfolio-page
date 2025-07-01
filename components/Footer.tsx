@@ -175,7 +175,7 @@ const Footer = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
+              {/* <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-violet-100 dark:bg-violet-900/20 rounded-lg flex items-center justify-center">
                   <HiPhone className="w-6 h-6 text-violet-600 dark:text-violet-400" />
                 </div>
@@ -183,7 +183,7 @@ const Footer = () => {
                   <p className="font-medium text-gray-900 dark:text-white">Phone</p>
                   <p className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
                 </div>
-              </div>
+              </div> */}
               
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-violet-100 dark:bg-violet-900/20 rounded-lg flex items-center justify-center">
