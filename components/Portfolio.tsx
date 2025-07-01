@@ -1,11 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { HiExternalLink, HiCode, HiEye } from "react-icons/hi";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Portfolio = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLDivElement>();
+  const { elementRef: filtersRef, isVisible: filtersVisible } = useScrollAnimation<HTMLDivElement>();
+  const { elementRef: projectsRef, isVisible: projectsVisible } = useScrollAnimation<HTMLDivElement>();
+  const { elementRef: ctaRef, isVisible: ctaVisible } = useScrollAnimation<HTMLDivElement>();
+
   const works = [
     {
-      title: "Start-up computer conmpany",
+      title: "Start-up computer company",
       subtitle: "Start-up website design and development",
       description: `A modern computer requirements website for a startup, built 
       with a Figma-designed interface and a robust Next.js/React framework 
@@ -14,11 +24,11 @@ const Portfolio = () => {
         "https://res.cloudinary.com/djdnlogf1/image/upload/v1745942260/Screenshot_2025-04-29_125508_mljyks.png",
       image_width: 600,
       image_height: 400,
-      image_alt: "Computer conmpany website hero",
+      image_alt: "Computer company website hero",
       link: "https://jm99-website.vercel.app/",
-      tech: `Next.js, React, TypeScript, Lucide, Shadcn, Vercel,
-                  React Dom, Tailwind CSS, Figma, VS Code, Git,
-                  Github`,
+      github: "https://github.com/yourusername/project1",
+      category: "web",
+      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Figma"],
     },
     {
       title: "Appointment Booking System",
@@ -33,9 +43,9 @@ const Portfolio = () => {
       image_height: 400,
       image_alt: "Booking form",
       link: "https://maraxo-app.vercel.app/",
-      tech: `Next.js, React, TypeScript, AWS RDS, Shadcn, Vercel, Redux,
-            PostrgeSQL, React Query, Tailwind CSS, Figma, VS Code, Git,
-            Github, Zod, Jest`,
+      github: "https://github.com/yourusername/project2",
+      category: "web",
+      tech: ["Next.js", "React", "TypeScript", "AWS RDS", "PostgreSQL", "Redux"],
     },
     {
       title: "Natourex",
@@ -51,29 +61,10 @@ const Portfolio = () => {
       image_height: 400,
       image_alt: "Natourex by Maxim Degtiarev",
       link: "https://slack-clone-macks-v2.vercel.app/",
-      tech: `PUG, HTML5, CSS3, JavaScript ES6, Node, Express, Axios,
-                  Bcrypt, Helmet, PUG, Nodemailer, Slugify, Leaflet, MondoDB,
-                  Mongoose, JWT, Netlify, Stripe, Babel, Cypress, RESTFull API,
-                  Postman, VS Code, Github`,
+      github: "https://github.com/yourusername/project3",
+      category: "fullstack",
+      tech: ["Node.js", "Express", "MongoDB", "JWT", "Stripe", "PUG"],
     },
-    // {
-    //   title: "Bancax",
-    //   subtitle: "StartUp&apos;s Directory",
-    //   description: `A web application built on a RESTful API architecture to
-    //               provide users with complete control over their personal
-    //               finances. Includes: Automated generation of expense summaries,
-    //               secure user authentication and email verification for enhanced
-    //               data protection.`,
-    //   image:
-    //     "https://res.cloudinary.com/djdnlogf1/image/upload/v1737475215/bancax_ybo6xo.png",
-    //   image_width: 600,
-    //   image_height: 400,
-    //   image_alt: "Bancax website By Maxim Degtiarev",
-    //   link: "https://bancax.vercel.app",
-    //   tech: `React, Node, Express, MongoDB, JWT, Mongoose, BCrypt,
-    //               Nodemailer, Cloudinary, RESTfull API, Figma, Vite, Vercel,
-    //               Jest, VS Code, Github`,
-    // },
     {
       title: "Slack Clone",
       subtitle: "Community chat app",
@@ -86,233 +77,184 @@ const Portfolio = () => {
       image_height: 400,
       image_alt: "Slack Clone By Macks",
       link: "https://slack-clone-macks-v2.vercel.app/",
-      tech: `React, Node, Express, MongoDB, JWT, Mongoose, BCrypt, RESTfull
-                  API, Figma, Vite, Vercel, VS Code, Jest, Firebase, Github`,
+      github: "https://github.com/yourusername/project4",
+      category: "fullstack",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "JWT"],
     },
   ];
 
+  const filters = [
+    { id: "all", label: "All Projects" },
+    { id: "web", label: "Web Apps" },
+    { id: "fullstack", label: "Full Stack" },
+    { id: "mobile", label: "Mobile Apps" },
+  ];
+
+  const filteredWorks = works.filter(work => 
+    activeFilter === "all" ? true : work.category === activeFilter
+  );
+
   return (
-    <section className="py-10 md:py-16" id="portfolio">
-      <div className="container max-w-screen-xl mx-auto px-4">
-        <div className="flex flex-col lg:flex-row justify-between animation">
-          <div className="mb-10 lg:mb-0 pr-16">
-            <h1 className="font-medium text-violet-600 text-3xl md:text-5xl mb-5">
-              Portfolio
-            </h1>
+    <section className="section-padding bg-gray-50 dark:bg-gray-900" id="portfolio">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 ${
+            titleVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'
+          }`}
+        >
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="gradient-text">My Portfolio</span>
+          </h1>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Here are some of my recent projects that showcase my skills and expertise in web development.
+          </p>
+        </div>
 
-            <p className="font-normal text-gray-500 text-xs md:text-base">
-              I have brought here my biggest and favorite works as a
-              professional.
-            </p>
-          </div>
+        {/* Filter Buttons */}
+        <div 
+          ref={filtersRef}
+          className={`flex flex-wrap justify-center gap-4 mb-12 ${
+            filtersVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'
+          }`}
+        >
+          {filters.map((filter) => (
+            <button
+              key={filter.id}
+              onClick={() => setActiveFilter(filter.id)}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                activeFilter === filter.id
+                  ? "bg-violet-600 text-white shadow-lg"
+                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-violet-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600"
+              }`}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
 
-          <div className="space-y-24">
-            {works.map(work => (
-              <div
-                key={work.title}
-                className="flex md:space-x-6 flex-col md:flex-row object"
-              >
-                <div className="md:w-1/2 h-auto md:h-[55%] outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden hover:scale-125 ease-in-out duration-300">
+        {/* Projects Grid */}
+        <div 
+          ref={projectsRef}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${
+            projectsVisible ? 'scroll-stagger visible' : 'scroll-stagger'
+          }`}
+        >
+          {filteredWorks.map((work, index) => (
+            <div
+              key={work.title}
+              className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift"
+            >
+              {/* Image Container */}
+              <div className="relative overflow-hidden">
+                <Image
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  src={work.image}
+                  alt={work.image_alt}
+                  width={work.image_width}
+                  height={work.image_height}
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   <Link
                     href={work.link}
-                    className="cursor-pointer"
+                    className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-violet-600 hover:text-white transition-all duration-200"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <Image
-                      className="w-full object-cover"
-                      src={work.image}
-                      alt={work.image_alt}
-                      width={work.image_width}
-                      height={work.image_height}
-                    />
+                    <HiExternalLink className="w-5 h-5" />
                   </Link>
+                  {work.github && (
+                    <Link
+                      href={work.github}
+                      className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-violet-600 hover:text-white transition-all duration-200"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <HiCode className="w-5 h-5" />
+                    </Link>
+                  )}
                 </div>
+              </div>
 
-                <span className="w-1/12 h-0.5 bg-gray-300 mt-5 hidden md:block"></span>
-
-                <div className="md:w-5/12">
-                  <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5 mt-5 md:mt-0">
+              {/* Content */}
+              <div className="p-8">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300">
                     {work.title}
-                  </h1>
-                  <h6>{work.subtitle}</h6>
-
-                  <p className="font-normal text-gray-500 text-sm md:text-base">
-                    {work.description}
+                  </h3>
+                  <p className="text-violet-600 dark:text-violet-400 font-medium">
+                    {work.subtitle}
                   </p>
-                  <span className="font-normal text-violet-500 text-md md:text-base">
-                    Technologies:{" "}
-                  </span>
-                  <span>{work.tech}</span>
+                </div>
+
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  {work.description}
+                </p>
+
+                {/* Tech Stack */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                    Technologies Used:
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {work.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-violet-100 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300 text-xs font-medium rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex space-x-4">
+                  <Link
+                    href={work.link}
+                    className="btn-primary inline-flex items-center"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <HiEye className="w-4 h-4 mr-2" />
+                    View Live
+                  </Link>
+                  {work.github && (
+                    <Link
+                      href={work.github}
+                      className="btn-secondary inline-flex items-center"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <HiCode className="w-4 h-4 mr-2" />
+                      View Code
+                    </Link>
+                  )}
                 </div>
               </div>
-            ))}
-            {/* <div className="flex md:space-x-6 flex-col md:flex-row">
-              <div className="md:w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden hover:scale-125 ease-in-out duration-300">
-                <Image
-                  className="w-full object-cover"
-                  src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/ycdirectory_lwzasu.png"
-                  alt="YCDirectory Next.js Course"
-                  width={600}
-                  height={400}
-                />
-              </div>
-
-              <span className="w-1/12 h-0.5 bg-gray-300 mt-5 hidden md:block"></span>
-
-              <div className="md:w-5/12">
-                <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
-                  StartMaxUp
-                </h1>
-                <h6>StartUp&apos;s Directory</h6>
-
-                <p className="font-normal text-gray-500 text-sm md:text-base">
-                  A web application built on a RESTful API architecture to
-                  provide users with complete control over their personal
-                  finances. Includes: Automated generation of expense summaries,
-                  secure user authentication and email verification for enhanced
-                  data protection.
-                </p>
-                <span className="font-normal text-violet-500 text-sm md:text-base">
-                  Technologies:{" "}
-                </span>
-                <span>
-                  Next.js, React, TypeScript, Lucide, Sanity, Next-Auth, Vercel,
-                  React Dom, Tailwind CSS, Figma, Jest, VS Code, Markdown, Git,
-                  Github
-                </span>
-              </div>
             </div>
+          ))}
+        </div>
 
-            <div className="flex md:space-x-6 flex-col md:flex-row">
-              <div className="md:w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden  hover:scale-125 ease-in-out duration-300">
-                <Link
-                  href="https://bancax.vercel.app"
-                  className="cursor-pointer"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <Image
-                    className="w-full object-cover h-full"
-                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475215/bancax_ybo6xo.png"
-                    alt="Bancax website By Maxim Degtiarev"
-                    width={600}
-                    height={400}
-                  />
-                </Link>
-              </div>
-
-              <span className="w-1/12 h-0.5 bg-gray-300 mt-5 hidden md:block"></span>
-
-              <div className="md:w-5/12">
-                <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
-                  Bancax
-                </h1>
-                <h6>Accounting app</h6>
-
-                <p className="font-normal text-gray-500 text-sm md:text-base">
-                  A web application built on a RESTful API architecture to
-                  provide users with complete control over their personal
-                  finances. Includes: Automated generation of expense summaries,
-                  secure user authentication and email verification for enhanced
-                  data protection.
-                </p>
-                <span className="font-normal text-violet-500 text-sm md:text-base">
-                  Technologies:{" "}
-                </span>
-                <span>
-                  React, Node, Express, MongoDB, JWT, Mongoose, BCrypt,
-                  Nodemailer, Cloudinary, RESTfull API, Figma, Vite, Vercel,
-                  Jest, VS Code, Github
-                </span>
-              </div>
-            </div>
-
-            <div className="flex md:space-x-6 flex-col md:flex-row">
-              <div className="md:w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden  hover:scale-125 ease-in-out duration-300">
-                <Link
-                  href="https://slack-clone-macks-v2.vercel.app/"
-                  className="cursor-pointer"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <Image
-                    className="w-full object-contain"
-                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/slack_y5oila.png"
-                    alt="Slack Clone By Macks"
-                    width={600}
-                    height={400}
-                  />
-                </Link>
-              </div>
-
-              <span className="w-1/12 h-0.5 bg-gray-300 mt-5 hidden md:block"></span>
-
-              <div className="md:w-5/12">
-                <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
-                  Slack Clone
-                </h1>
-                <h6>Community chat app</h6>
-
-                <p className="font-normal text-gray-500 text-sm md:text-base">
-                  Developed a real-time chat application using the MERN stack,
-                  featuring user authentication, direct messaging updates, group
-                  channels, and message persistence.
-                </p>
-                <span className="font-normal text-violet-500 text-sm md:text-base">
-                  Technologies:{" "}
-                </span>
-                <span>
-                  React, Node, Express, MongoDB, JWT, Mongoose, BCrypt, RESTfull
-                  API, Figma, Vite, Vercel, VS Code, Jest, Firebase, Github
-                </span>
-              </div>
-            </div>
-
-            <div className="flex md:space-x-6 flex-col md:flex-row">
-              <div className="md:w-1/2 h-52 outline rounded-sm outline-[.2rem] outline-offset-[.1rem] outline-blue-500 overflow-hidden hover:scale-125 ease-in-out duration-300">
-                <Link
-                  href="https://notourex.onrender.com/"
-                  className="cursor-pointer"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <Image
-                    className="w-full object-contain"
-                    src="https://res.cloudinary.com/djdnlogf1/image/upload/v1737561821/natourex_cjd61s.png"
-                    alt="Natourex by Maxim Degtiarev"
-                    width={600}
-                    height={400}
-                  />
-                </Link>
-              </div>
-
-              <span className="w-1/12 h-0.5 bg-gray-300 mt-5 hidden md:block"></span>
-
-              <div className="md:w-5/12">
-                <h1 className="font-normal text-blue-500 text-3xl md:text-4xl mb-5">
-                  Natourex
-                </h1>
-                <h6>Tours e-commerce website</h6>
-
-                <p className="font-normal text-gray-500 text-sm md:text-base">
-                  Website coded using SSR and implementing self-made RESTful API
-                  with NodeJs. Routing and middlewares with Express. CRUD
-                  operations, data modeling, population, geospatial data using
-                  mongoose and MongoDB Atlas. JWT authentication and cookies
-                  implementation
-                </p>
-                <span className="font-normal text-violet-500 text-sm md:text-base">
-                  Technologies:{" "}
-                </span>
-                <span>
-                  PUG, HTML5, CSS3, JavaScript ES6, Node, Express, Axios,
-                  Bcrypt, Helmet, PUG, Nodemailer, Slugify, Leaflet, MondoDB,
-                  Mongoose, JWT, Netlify, Stripe, Babel, Cypress, RESTFull API,
-                  Postman, VS Code, Github
-                </span>
-              </div> */}
-            {/* </div> */}
+        {/* Call to Action */}
+        <div 
+          ref={ctaRef}
+          className={`text-center mt-16 ${
+            ctaVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'
+          }`}
+        >
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Have a project in mind?
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              Let's work together to bring your ideas to life. I'm always excited to take on new challenges and create amazing digital experiences.
+            </p>
+            <Link href="#footer" className="btn-primary inline-flex items-center">
+              Let's Talk
+              <HiExternalLink className="w-4 h-4 ml-2" />
+            </Link>
           </div>
         </div>
       </div>

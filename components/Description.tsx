@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 const Description = () => {
@@ -11,7 +13,7 @@ const Description = () => {
 
           <p className="font-normal text-gray-400 text-md md:text-md mb-20">
             Self-driven, highly motivated Full-Stack Web Developer with more
-            than 2 years involved in the whole software development life cycle
+            than 3 years involved in the whole software development life cycle
             using JavaScript, TypeScript, React, CSS, HTML, and Node. Proven
             ability to manage projects independently, meet deadlines, and
             deliver high-quality code. While my experience has been primarily
