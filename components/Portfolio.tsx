@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { HiExternalLink, HiCode, HiEye } from "react-icons/hi";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -12,14 +13,13 @@ const Portfolio = () => {
   const { elementRef: filtersRef, isVisible: filtersVisible } = useScrollAnimation<HTMLDivElement>();
   const { elementRef: projectsRef, isVisible: projectsVisible } = useScrollAnimation<HTMLDivElement>();
   const { elementRef: ctaRef, isVisible: ctaVisible } = useScrollAnimation<HTMLDivElement>();
+  const { t } = useLanguage();
 
   const works = [
     {
-      title: "Start-up computer company",
-      subtitle: "Start-up website design and development",
-      description: `A modern computer requirements website for a startup, built 
-      with a Figma-designed interface and a robust Next.js/React framework 
-      for optimal performance and scalability.`,
+      title: t('works.startup.title'),
+      subtitle: t('works.startup.subtitle'),
+      description: t('works.startup.description'),
       image:
         "https://res.cloudinary.com/djdnlogf1/image/upload/v1745942260/Screenshot_2025-04-29_125508_mljyks.png",
       image_width: 600,
@@ -31,12 +31,9 @@ const Portfolio = () => {
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Figma"],
     },
     {
-      title: "Appointment Booking System",
-      subtitle: "Client and Admin appointment administration",
-      description: `Designed and built an efficient appointment booking platform 
-      for both clients and administrators, leveraging Next.js for a smooth user 
-      experience, Redux for robust state management, and a secure PostgreSQL 
-      database on AWS RDS accessed via a RESTful API.`,
+      title: t('works.booking.title'),
+      subtitle: t('works.booking.subtitle'),
+      description: t('works.booking.description'),
       image:
         "https://res.cloudinary.com/djdnlogf1/image/upload/v1751374659/Screenshot_2025-07-01_095716_rimcjc.png",
       image_width: 600,
@@ -48,13 +45,9 @@ const Portfolio = () => {
       tech: ["Next.js", "React", "TypeScript", "AWS RDS", "PostgreSQL", "Redux"],
     },
     {
-      title: "Natourex",
-      subtitle: "Tours e-commerce website",
-      description: `Website coded using SSR and implementing self-made RESTful API
-                  with NodeJs. Routing and middlewares with Express. CRUD
-                  operations, data modeling, population, geospatial data using
-                  mongoose and MongoDB Atlas. JWT authentication and cookies
-                  implementation. Stripe payment integration.`,
+      title: t('works.natourex.title'),
+      subtitle: t('works.natourex.subtitle'),
+      description: t('works.natourex.description'),
       image:
         "https://res.cloudinary.com/djdnlogf1/image/upload/v1737561821/natourex_cjd61s.png",
       image_width: 600,
@@ -66,11 +59,9 @@ const Portfolio = () => {
       tech: ["Node.js", "Express", "MongoDB", "JWT", "Stripe", "PUG"],
     },
     {
-      title: "Slack Clone",
-      subtitle: "Community chat app",
-      description: `Developed a real-time chat application using the MERN stack,
-                  featuring user authentication, direct messaging updates, group
-                  channels, and message persistence.`,
+      title: t('works.slack.title'),
+      subtitle: t('works.slack.subtitle'),
+      description: t('works.slack.description'),
       image:
         "https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/slack_y5oila.png",
       image_width: 600,
@@ -84,10 +75,10 @@ const Portfolio = () => {
   ];
 
   const filters = [
-    { id: "all", label: "All Projects" },
-    { id: "web", label: "Web Apps" },
-    { id: "fullstack", label: "Full Stack" },
-    { id: "mobile", label: "Mobile Apps" },
+    { id: "all", label: t('portfolio.filter.all') },
+    { id: "web", label: t('portfolio.filter.web') },
+    { id: "fullstack", label: t('portfolio.filter.api') },
+    { id: "mobile", label: t('portfolio.filter.mobile') },
   ];
 
   const filteredWorks = works.filter(work => 
@@ -104,10 +95,10 @@ const Portfolio = () => {
           }`}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">My Portfolio</span>
+            <span className="gradient-text">{t('portfolio.title')}</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and expertise in web development.
+            {t('portfolio.subtitle')}
           </p>
         </div>
 
@@ -195,7 +186,7 @@ const Portfolio = () => {
                 {/* Tech Stack */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-                    Technologies Used:
+                    {t('portfolio.techUsed')}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {work.tech.map((tech, techIndex) => (
@@ -218,7 +209,7 @@ const Portfolio = () => {
                     target="_blank"
                   >
                     <HiEye className="w-4 h-4 mr-2" />
-                    View Live
+                    {t('portfolio.viewLive')}
                   </Link>
                   {work.github && (
                     <Link
@@ -228,7 +219,7 @@ const Portfolio = () => {
                       target="_blank"
                     >
                       <HiCode className="w-4 h-4 mr-2" />
-                      View Code
+                      {t('portfolio.viewCode')}
                     </Link>
                   )}
                 </div>
@@ -246,16 +237,16 @@ const Portfolio = () => {
         >
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Have a project in mind?
+              {t('portfolio.haveProject')}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              I&apos;m passionate about creating innovative web solutions that deliver exceptional user experiences.
+              {t('portfolio.passionate')}
             </p>
             <p className="text-gray-600 dark:text-gray-300">
-              Let&apos;s work together to bring your ideas to life!
+              {t('portfolio.workTogether')}
             </p>
             <Link href="#footer" className="btn-primary inline-flex items-center">
-              Let&apos;s Talk
+              {t('portfolio.letsTalk')}
               <HiExternalLink className="w-4 h-4 ml-2" />
             </Link>
           </div>

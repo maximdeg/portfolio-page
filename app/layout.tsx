@@ -3,6 +3,7 @@ import { Oxanium } from "next/font/google";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import Head from "next/head";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const oxaniumFont = Oxanium({
   subsets: ["latin"],
@@ -27,7 +28,9 @@ export default function RootLayout({
         <meta name="description" content="" key="desc" />
       </Head>
       <body className={oxaniumFont.className}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

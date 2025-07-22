@@ -5,10 +5,12 @@ import Link from "next/link";
 import React from "react";
 import { HiArrowDown, HiDownload } from "react-icons/hi";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
   const { elementRef: textRef, isVisible: textVisible } = useScrollAnimation<HTMLDivElement>();
   const { elementRef: imageRef, isVisible: imageVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.3 });
+  const { t } = useLanguage();
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 mt-16 sm:mt-0">
@@ -23,16 +25,14 @@ const Hero = () => {
           >
             <div className="space-y-4">
               <p className="text-lg md:text-xl text-violet-600 dark:text-violet-400 font-medium">
-                Hi 👋! My name is Maxim Degtiarev
+                {t('hero.greeting')}
               </p>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Full Stack{" "}
-                <span className="gradient-text">Web Developer</span>
+                {t('hero.title')}
               </h1>
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0">
-                Experienced full-stack developer with 3+ years of expertise in
-                Next.js and MERN Stack. Happy to help you with your{" "}
-                <span className="text-violet-600 dark:text-violet-400 font-semibold">Website.</span>
+                {t('hero.description')}{" "}
+                <span className="text-violet-600 dark:text-violet-400 font-semibold">{t('hero.website')}</span>
               </p>
             </div>
 
@@ -42,14 +42,14 @@ const Hero = () => {
                 href="#portfolio"
                 className="btn-primary inline-flex items-center justify-center group"
               >
-                See my work!
+                {t('hero.seeWork')}
                 <HiArrowDown className="ml-2 group-hover:translate-y-1 transition-transform duration-200" />
               </Link>
               <Link
                 href="#footer"
                 className="btn-secondary inline-flex items-center justify-center group"
               >
-                Hire Me
+                {t('hero.hireMe')}
                 <HiDownload className="ml-2 group-hover:translate-y-1 transition-transform duration-200" />
               </Link>
             </div>
@@ -58,15 +58,15 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center lg:justify-start gap-8 pt-8">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-violet-600 dark:text-violet-400">3+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{t('hero.yearsExperience')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-violet-600 dark:text-violet-400">10+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Big Projects Completed</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{t('hero.projectsCompleted')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-violet-600 dark:text-violet-400">100%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{t('hero.clientSatisfaction')}</div>
               </div>
             </div>
           </div>

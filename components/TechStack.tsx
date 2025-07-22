@@ -3,6 +3,7 @@
 import React from 'react';
 import { HiDatabase, HiCloud, HiGlobe } from "react-icons/hi";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TechStack = () => {
   const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLDivElement>();
@@ -10,23 +11,24 @@ const TechStack = () => {
   const { elementRef: skillsRef, isVisible: skillsVisible } = useScrollAnimation<HTMLDivElement>();
   const { elementRef: additionalRef, isVisible: additionalVisible } = useScrollAnimation<HTMLDivElement>();
   const { elementRef: learningRef, isVisible: learningVisible } = useScrollAnimation<HTMLDivElement>();
+  const { t } = useLanguage();
 
   const technologies = {
-    "Frontend": [
+    [t('techStack.frontend')]: [
       { name: "React", level: 90, color: "#61DAFB" },
       { name: "Next.js", level: 85, color: "#000000" },
       { name: "TypeScript", level: 80, color: "#3178C6" },
       { name: "Tailwind CSS", level: 85, color: "#06B6D4" },
       { name: "HTML/CSS", level: 90, color: "#E34F26" },
     ],
-    "Backend": [
+    [t('techStack.backend')]: [
       { name: "Node.js", level: 85, color: "#339933" },
       { name: "Express.js", level: 80, color: "#000000" },
       { name: "MongoDB", level: 75, color: "#47A248" },
       { name: "PostgreSQL", level: 70, color: "#336791" },
       { name: "REST APIs", level: 85, color: "#FF6B6B" },
     ],
-    "Tools & Others": [
+    [t('techStack.tools')]: [
       { name: "Git", level: 85, color: "#F05032" },
       { name: "Docker", level: 65, color: "#2496ED" },
       { name: "AWS", level: 70, color: "#FF9900" },
@@ -66,10 +68,10 @@ const TechStack = () => {
           }`}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Tech Stack</span>
+            <span className="gradient-text">{t('techStack.title')}</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here&apos;s a comprehensive overview of the technologies and tools I use to build modern, scalable applications.
+            {t('techStack.subtitle')}
           </p>
         </div>
 
@@ -191,23 +193,23 @@ const TechStack = () => {
         >
           <div className="bg-gradient-to-r from-violet-600 to-blue-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
-              Always Learning
+              {t('techStack.alwaysLearning.title')}
             </h3>
             <p className="text-violet-100 mb-6 max-w-2xl mx-auto">
-              I&apos;m constantly learning and staying up-to-date with the latest technologies and best practices.
+              {t('techStack.alwaysLearning.description')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                Kubernetes
+                {t('techStack.alwaysLearning.kubernetes')}
               </span>
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                Machine Learning
+                {t('techStack.alwaysLearning.machineLearning')}
               </span>
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                Microservices
+                {t('techStack.alwaysLearning.microservices')}
               </span>
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                Web3
+                {t('techStack.alwaysLearning.web3')}
               </span>
             </div>
           </div>
