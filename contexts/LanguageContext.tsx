@@ -63,9 +63,9 @@ const translations = {
     'portfolio.title': 'My Portfolio',
     'portfolio.subtitle': 'Here are some of my recent projects. Each one represents a unique challenge and solution.',
     'portfolio.filter.all': 'All',
-    'portfolio.filter.web': 'Web',
-    'portfolio.filter.mobile': 'Mobile',
-    'portfolio.filter.api': 'API',
+    'portfolio.filter.node': 'Node',
+    'portfolio.filter.wordpress': 'WordPress',
+    'portfolio.filter.shopify': 'Shopify',
     'portfolio.viewProject': 'View Project',
     'portfolio.viewCode': 'View Code',
     'portfolio.techUsed': 'Technologies Used:',
@@ -76,21 +76,33 @@ const translations = {
     'portfolio.letsTalk': 'Let\'s Talk',
     
     // Portfolio Works
-    'works.startup.title': 'Start-up computer company',
-    'works.startup.subtitle': 'Start-up website design and development',
-    'works.startup.description': 'A modern computer requirements website for a startup, built with a Figma-designed interface and a robust Next.js/React framework for optimal performance and scalability.',
+    'works.proj1.title': 'Next-Gen E-commerce',
+    'works.proj1.subtitle': 'Full retail tech platform with AI asset automation',
+    'works.proj1.description': 'I implemented Next.js 15 and React 19 for instant navigation. I integrated the Claid AI API in the admin backend to automate high-quality product image generation, optimizing the editorial workflow by 70%.',
     
-    'works.booking.title': 'Appointment Booking System',
-    'works.booking.subtitle': 'Client and Admin appointment administration',
-    'works.booking.description': 'Designed and built an efficient appointment booking platform for both clients and administrators, leveraging Next.js for a smooth user experience, Redux for robust state management, and a secure PostgreSQL database on AWS RDS accessed via a RESTful API.',
+    'works.proj2.title': 'Healthcare Management SaaS',
+    'works.proj2.subtitle': 'Multi-provider automated appointment management system',
+    'works.proj2.description': 'I developed a real-time availability engine that processes slots on the fly, integrating Upstash Redis for concurrency control and PostgreSQL for persistence. WhatsApp API reminder automation reduced no-shows by 40%.',
     
-    'works.natourex.title': 'Natourex',
-    'works.natourex.subtitle': 'Tours e-commerce website',
-    'works.natourex.description': 'Website coded using SSR and implementing self-made RESTful API with NodeJs. Routing and middlewares with Express. CRUD operations, data modeling, population, geospatial data using mongoose and MongoDB Atlas. JWT authentication and cookies implementation. Stripe payment integration.',
+    'works.proj3.title': 'Enterprise Booking Engine',
+    'works.proj3.subtitle': 'Full-stack experience booking platform with geospatial logic',
+    'works.proj3.description': 'Node.js/MongoDB architecture with GeoJSON geospatial queries. I implemented an advanced security pipeline including rate-limiting, NoSQL injection and XSS prevention, and server-side image processing with Sharp.',
     
-    'works.slack.title': 'Slack Clone',
-    'works.slack.subtitle': 'Community chat app',
-    'works.slack.description': 'Developed a real-time chat application using the MERN stack, featuring user authentication, direct messaging updates, group channels, and message persistence.',
+    'works.proj4.title': 'Author E-commerce',
+    'works.proj4.subtitle': 'Premium sustainable athleisure store',
+    'works.proj4.description': 'Custom Shopify theme (Liquid) built for conversion. I implemented API-based predictive search and a modular component architecture that lets the client scale the catalog while keeping load under 1.5s.',
+    
+    'works.proj5.title': 'Dance Sport Institutional Ecosystem',
+    'works.proj5.subtitle': 'Data hub and competition management for the Argentine Dance Sport Association',
+    'works.proj5.description': 'Turned WordPress into a data management app with Custom Post Types and extended metadata. Built a custom plugin for dynamic discipline mapping and national rankings management.',
+    
+    'works.proj6.title': 'Specialty Platform',
+    'works.proj6.subtitle': 'Clinical practice digitization with wellness-focused UX',
+    'works.proj6.description': 'Theme built from scratch with PHP Strict Typing, pixel-perfect fidelity and semantic SEO. Simplified admin interface with ACF for full client autonomy.',
+    
+    'works.proj7.title': 'Conversion Funnel',
+    'works.proj7.subtitle': 'Strategic landing page for real estate coaching',
+    'works.proj7.description': 'Next.js 14 for ultra-fast content delivery. Design based on consumer psychology and interactive components with Framer Motion, optimized for real-time lead capture and qualification.',
     
     // Tech Stack
     'techStack.title': 'My Tech Stack',
@@ -176,9 +188,9 @@ const translations = {
     'portfolio.title': 'Mi Portfolio',
     'portfolio.subtitle': 'Aquí hay algunos de mis proyectos recientes. Cada uno representa un desafío y solución únicos.',
     'portfolio.filter.all': 'Todos',
-    'portfolio.filter.web': 'Web',
-    'portfolio.filter.mobile': 'Móvil',
-    'portfolio.filter.api': 'API',
+    'portfolio.filter.node': 'Node',
+    'portfolio.filter.wordpress': 'WordPress',
+    'portfolio.filter.shopify': 'Shopify',
     'portfolio.viewProject': 'Ver Proyecto',
     'portfolio.viewCode': 'Ver Código',
     'portfolio.techUsed': 'Tecnologías Utilizadas:',
@@ -189,21 +201,33 @@ const translations = {
     'portfolio.letsTalk': 'Hablemos',
     
     // Portfolio Works
-    'works.startup.title': 'Empresa de computadoras startup',
-    'works.startup.subtitle': 'Diseño y desarrollo de sitio web para startup',
-    'works.startup.description': 'Un sitio web moderno de requisitos de computadoras para una startup, construido con una interfaz diseñada en Figma y un robusto framework Next.js/React para un rendimiento y escalabilidad óptimos.',
+    'works.proj1.title': 'E-commerce de Próxima Generación',
+    'works.proj1.subtitle': 'Plataforma integral de retail tecnológico con automatización de activos por IA',
+    'works.proj1.description': 'Implementé Next.js 15 y React 19 para navegación instantánea. Integré la API de Claid AI en el backend administrativo para automatizar la generación de imágenes de producto de alta calidad, optimizando el flujo editorial en un 70%.',
     
-    'works.booking.title': 'Sistema de Reserva de Citas',
-    'works.booking.subtitle': 'Administración de citas para clientes y administradores',
-    'works.booking.description': 'Diseñé y construí una plataforma eficiente de reserva de citas tanto para clientes como para administradores, aprovechando Next.js para una experiencia de usuario fluida, Redux para una gestión de estado robusta, y una base de datos PostgreSQL segura en AWS RDS accedida a través de una API RESTful.',
+    'works.proj2.title': 'SaaS de Gestión de Salud',
+    'works.proj2.subtitle': 'Sistema multi-proveedor para la gestión automatizada de citas médicas',
+    'works.proj2.description': 'Desarrollé un motor de disponibilidad en tiempo real que procesa slots al vuelo, integrando Upstash Redis para control de concurrencia y PostgreSQL para persistencia. Automatización de recordatorios vía WhatsApp API, reduciendo ausencias en un 40%.',
     
-    'works.natourex.title': 'Natourex',
-    'works.natourex.subtitle': 'Sitio web de comercio electrónico de tours',
-    'works.natourex.description': 'Sitio web codificado usando SSR e implementando API RESTful propia con NodeJs. Enrutamiento y middlewares con Express. Operaciones CRUD, modelado de datos, población, datos geoespaciales usando mongoose y MongoDB Atlas. Implementación de autenticación JWT y cookies. Integración de pagos con Stripe.',
+    'works.proj3.title': 'Booking Engine de Grado Empresarial',
+    'works.proj3.subtitle': 'Plataforma Full-Stack para reserva de experiencias con lógica geoespacial',
+    'works.proj3.description': 'Arquitectura Node.js/MongoDB con consultas geoespaciales (GeoJSON). Pipeline de seguridad avanzado con rate-limiting, prevención de inyecciones NoSQL y XSS, y procesamiento de imágenes en servidor con Sharp.',
     
-    'works.slack.title': 'Clon de Slack',
-    'works.slack.subtitle': 'Aplicación de chat comunitario',
-    'works.slack.description': 'Desarrollé una aplicación de chat en tiempo real usando el stack MERN, con autenticación de usuarios, actualizaciones de mensajería directa, canales grupales y persistencia de mensajes.',
+    'works.proj4.title': 'E-commerce de Autor',
+    'works.proj4.subtitle': 'Tienda premium de athleisure sostenible',
+    'works.proj4.description': 'Custom Theme en Shopify (Liquid) optimizado para conversión. Búsqueda predictiva basada en API y arquitectura de componentes modulares que permite escalar el catálogo manteniendo carga inferior a 1.5s.',
+    
+    'works.proj5.title': 'Ecosistema Institucional de Baile Deportivo',
+    'works.proj5.subtitle': 'Central de datos y gestión de competencias para la AABD',
+    'works.proj5.description': 'Transformación de WordPress en aplicación de gestión de datos con Custom Post Types y metadatos extendidos. Plugin propio para mapeo dinámico de disciplinas y gestión de rankings nacionales.',
+    
+    'works.proj6.title': 'Plataforma de Especialidad',
+    'works.proj6.subtitle': 'Digitalización de práctica clínica con enfoque en UX de bienestar',
+    'works.proj6.description': 'Tema desde cero con PHP Strict Typing, fidelidad visual pixel-perfect y optimización de SEO semántico. Interfaz administrativa simplificada con ACF para autonomía total del cliente.',
+    
+    'works.proj7.title': 'Funnel de Conversión',
+    'works.proj7.subtitle': 'Landing page estratégica para coaching inmobiliario',
+    'works.proj7.description': 'Next.js 14 para entrega de contenido ultrarrápida. Diseño basado en psicología del consumidor y componentes interactivos con Framer Motion, optimizado para captación y cualificación de leads en tiempo real.',
     
     // Tech Stack
     'techStack.title': 'Mi Stack Tecnológico',

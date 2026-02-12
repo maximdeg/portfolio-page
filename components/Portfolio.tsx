@@ -17,68 +17,103 @@ const Portfolio = () => {
 
   const works = [
     {
-      title: t('works.startup.title'),
-      subtitle: t('works.startup.subtitle'),
-      description: t('works.startup.description'),
-      image:
-        "https://res.cloudinary.com/djdnlogf1/image/upload/v1745942260/Screenshot_2025-04-29_125508_mljyks.png",
+      title: t('works.proj1.title'),
+      subtitle: t('works.proj1.subtitle'),
+      description: t('works.proj1.description'),
+      image: "/proyect-1.png",
       image_width: 600,
       image_height: 400,
-      image_alt: "Computer company website hero",
+      image_alt: "Next-Gen E-commerce",
       link: "https://jm99-website.vercel.app/",
-      github: "https://github.com/maximdeg/jm99-website",
-      category: "web",
-      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Figma"],
+      github: undefined,
+      category: "node",
+      tech: ["Next.js 15", "TypeScript", "Cloudinary", "IA APIs", "Tailwind CSS"],
     },
     {
-      title: t('works.booking.title'),
-      subtitle: t('works.booking.subtitle'),
-      description: t('works.booking.description'),
-      image:
-        "https://res.cloudinary.com/djdnlogf1/image/upload/v1751374659/Screenshot_2025-07-01_095716_rimcjc.png",
+      title: t('works.proj2.title'),
+      subtitle: t('works.proj2.subtitle'),
+      description: t('works.proj2.description'),
+      image: "/proyect-2.png",
       image_width: 600,
       image_height: 400,
-      image_alt: "Booking form",
-      link: "https://maraxo-app.vercel.app/",
-      github: "https://github.com/maximdeg/maraxo-app-2",
-      category: "web",
-      tech: ["Next.js", "React", "TypeScript", "AWS RDS", "PostgreSQL", "Redux"],
+      image_alt: "Healthcare Management SaaS",
+      link: "https://maxturnos.vercel.app/",
+      github: undefined,
+      category: "node",
+      tech: ["Next.js", "PostgreSQL", "Redis", "Node.js", "WhatsApp API"],
     },
     {
-      title: t('works.natourex.title'),
-      subtitle: t('works.natourex.subtitle'),
-      description: t('works.natourex.description'),
-      image:
-        "https://res.cloudinary.com/djdnlogf1/image/upload/v1737561821/natourex_cjd61s.png",
+      title: t('works.proj3.title'),
+      subtitle: t('works.proj3.subtitle'),
+      description: t('works.proj3.description'),
+      image: "/proyect-3.png",
       image_width: 600,
       image_height: 400,
-      image_alt: "Natourex by Maxim Degtiarev",
-      link: "https://slack-clone-macks-v2.vercel.app/",
-      github: "https://github.com/maximdeg/notourex",
-      category: "fullstack",
-      tech: ["Node.js", "Express", "MongoDB", "JWT", "Stripe", "PUG"],
+      image_alt: "Enterprise Booking Engine",
+      link: undefined,
+      github: undefined,
+      category: "node",
+      tech: ["Node.js", "Express", "MongoDB", "Leaflet.js", "Sharp"],
     },
     {
-      title: t('works.slack.title'),
-      subtitle: t('works.slack.subtitle'),
-      description: t('works.slack.description'),
-      image:
-        "https://res.cloudinary.com/djdnlogf1/image/upload/v1737475216/slack_y5oila.png",
+      title: t('works.proj4.title'),
+      subtitle: t('works.proj4.subtitle'),
+      description: t('works.proj4.description'),
+      image: "/proyect-4.png",
       image_width: 600,
       image_height: 400,
-      image_alt: "Slack Clone By Macks",
-      link: "https://slack-clone-macks-v2.vercel.app/",
-      github: "https://github.com/maximdeg/Slack-clone_macks-v2",
-      category: "fullstack",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "JWT"],
+      image_alt: "Author E-commerce - Lightworker",
+      link: "https://lightworkeronduty.com/",
+      github: undefined,
+      category: "shopify",
+      tech: ["Shopify Liquid", "JavaScript ES6+", "SEO Técnico"],
+    },
+    {
+      title: t('works.proj5.title'),
+      subtitle: t('works.proj5.subtitle'),
+      description: t('works.proj5.description'),
+      image: "/proyect-5.png",
+      image_width: 600,
+      image_height: 400,
+      image_alt: "Dance Sport Institutional Ecosystem",
+      link: "https://aabd.online/",
+      github: undefined,
+      category: "wordpress",
+      tech: ["WordPress", "Custom PHP", "Gutenberg Blocks", "Schema.org"],
+    },
+    {
+      title: t('works.proj6.title'),
+      subtitle: t('works.proj6.subtitle'),
+      description: t('works.proj6.description'),
+      image: "/proyect-6.png",
+      image_width: 600,
+      image_height: 400,
+      image_alt: "Specialty Platform",
+      link: "https://heartsonghealingarts.net/",
+      github: undefined,
+      category: "wordpress",
+      tech: ["WordPress", "PHP 7.4+", "ACF Pro", "Vanilla JS"],
+    },
+    {
+      title: t('works.proj7.title'),
+      subtitle: t('works.proj7.subtitle'),
+      description: t('works.proj7.description'),
+      image: "/proyect-7.png",
+      image_width: 600,
+      image_height: 400,
+      image_alt: "Conversion Funnel",
+      link: "https://the-real-expert-website.vercel.app/",
+      github: undefined,
+      category: "node",
+      tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
     },
   ];
 
   const filters = [
     { id: "all", label: t('portfolio.filter.all') },
-    { id: "web", label: t('portfolio.filter.web') },
-    { id: "fullstack", label: t('portfolio.filter.api') },
-    { id: "mobile", label: t('portfolio.filter.mobile') },
+    { id: "node", label: t('portfolio.filter.node') },
+    { id: "wordpress", label: t('portfolio.filter.wordpress') },
+    { id: "shopify", label: t('portfolio.filter.shopify') },
   ];
 
   const filteredWorks = works.filter(work => 
@@ -133,7 +168,7 @@ const Portfolio = () => {
         >
           {filteredWorks.map((work) => (
             <div
-              key={work.title}
+              key={work.image}
               className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift"
             >
               {/* Image Container */}
@@ -147,14 +182,16 @@ const Portfolio = () => {
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <Link
-                    href={work.link}
-                    className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all duration-200"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <HiExternalLink className="w-5 h-5" />
-                  </Link>
+                  {work.link && (
+                    <Link
+                      href={work.link}
+                      className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all duration-200"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <HiExternalLink className="w-5 h-5" />
+                    </Link>
+                  )}
                   {work.github && (
                     <Link
                       href={work.github}
@@ -201,16 +238,18 @@ const Portfolio = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex space-x-4">
-                  <Link
-                    href={work.link}
-                    className="btn-primary inline-flex items-center"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <HiEye className="w-4 h-4 mr-2" />
-                    {t('portfolio.viewLive')}
-                  </Link>
+                <div className="flex flex-wrap gap-4">
+                  {work.link && (
+                    <Link
+                      href={work.link}
+                      className="btn-primary inline-flex items-center"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <HiEye className="w-4 h-4 mr-2" />
+                      {t('portfolio.viewLive')}
+                    </Link>
+                  )}
                   {work.github && (
                     <Link
                       href={work.github}
