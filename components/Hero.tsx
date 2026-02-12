@@ -110,8 +110,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bounce-slow">
+        {/* Scroll indicator - left on mobile/tablet, centered on desktop */}
+        <div className="absolute bottom-12 md:bottom-10 lg:bottom-8 left-6 md:left-8 lg:left-1 lg:-translate-x-1/2 bounce-slow z-10">
           <HiArrowDown className="w-6 h-6 text-gray-400" />
         </div>
       </div>
