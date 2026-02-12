@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page (SPA) -->
+  <url>
+    <loc>https://maxdegdev.vercel.app/</loc>
+    <lastmod>2023-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Me Section (SPA) -->
+  <url>
+    <loc>https://maxdegdev.vercel.app/#about-me</loc>
+    <lastmod>2023-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Portfolio Section (SPA) -->
+  <url>
+    <loc>https://maxdegdev.vercel.app/#portfolio</loc>
+    <lastmod>2023-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tech Stack Section (SPA) -->
+  <url>
+    <loc>https://maxdegdev.vercel.app/#tech-stack</loc>
+    <lastmod>2023-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Section (SPA) (if exists) -->
+  <!-- <url>
+    <loc>https://maxdegdev.vercel.app/#contact</loc>
+    <lastmod>2023-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url> -->
+</urlset>
