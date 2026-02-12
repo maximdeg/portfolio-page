@@ -284,7 +284,7 @@ const Portfolio = () => {
             <p className="text-gray-600 dark:text-gray-300">
               {t('portfolio.workTogether')}
             </p>
-            <Link href="#footer" className="btn-primary inline-flex items-center">
+            <Link href="#footer" className="btn-primary inline-flex items-center mt-4">
               {t('portfolio.letsTalk')}
               <HiExternalLink className="w-4 h-4 ml-2" />
             </Link>

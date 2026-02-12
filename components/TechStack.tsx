@@ -15,45 +15,45 @@ const TechStack = () => {
 
   const technologies = {
     [t('techStack.frontend')]: [
+      { name: "Next.js", level: 90, color: "#000000" },
       { name: "React", level: 90, color: "#61DAFB" },
-      { name: "Next.js", level: 85, color: "#000000" },
-      { name: "TypeScript", level: 80, color: "#3178C6" },
-      { name: "Tailwind CSS", level: 85, color: "#06B6D4" },
-      { name: "HTML/CSS", level: 90, color: "#E34F26" },
+      { name: "TypeScript", level: 85, color: "#3178C6" },
+      { name: "Tailwind CSS", level: 88, color: "#06B6D4" },
+      { name: "Framer Motion", level: 80, color: "#BB4BE9" },
     ],
     [t('techStack.backend')]: [
-      { name: "Node.js", level: 85, color: "#339933" },
-      { name: "Express.js", level: 80, color: "#000000" },
-      { name: "MongoDB", level: 75, color: "#47A248" },
-      { name: "PostgreSQL", level: 70, color: "#336791" },
-      { name: "REST APIs", level: 85, color: "#FF6B6B" },
+      { name: "Node.js", level: 88, color: "#339933" },
+      { name: "Express.js", level: 85, color: "#000000" },
+      { name: "PostgreSQL", level: 82, color: "#336791" },
+      { name: "MongoDB", level: 80, color: "#47A248" },
+      { name: "Redis", level: 75, color: "#DC382D" },
     ],
     [t('techStack.tools')]: [
-      { name: "Git", level: 85, color: "#F05032" },
-      { name: "Docker", level: 65, color: "#2496ED" },
-      { name: "AWS", level: 70, color: "#FF9900" },
-      { name: "Vercel", level: 80, color: "#000000" },
-      { name: "Figma", level: 75, color: "#F24E1E" },
+      { name: "Shopify", level: 85, color: "#96BF48" },
+      { name: "WordPress", level: 85, color: "#21759B" },
+      { name: "Docker", level: 75, color: "#2496ED" },
+      { name: "Vercel", level: 88, color: "#000000" },
+      { name: "Cloudinary", level: 80, color: "#3448C5" },
     ]
   };
 
   const categories = [
     {
-      title: "Frontend Development",
+      title: t('techStack.category1.title'),
       icon: <HiGlobe className="w-8 h-8" />,
-      description: "Modern web technologies for creating responsive and interactive user interfaces",
+      description: t('techStack.category1.description'),
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Backend Development",
+      title: t('techStack.category2.title'),
       icon: <HiDatabase className="w-8 h-8" />,
-      description: "Server-side technologies and database management for robust applications",
+      description: t('techStack.category2.description'),
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "DevOps & Tools",
+      title: t('techStack.category3.title'),
       icon: <HiCloud className="w-8 h-8" />,
-      description: "Development tools, deployment, and cloud services for scalable applications",
+      description: t('techStack.category3.description'),
       color: "from-purple-500 to-pink-500"
     }
   ];
@@ -163,13 +163,13 @@ const TechStack = () => {
         >
           <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">
-              Additional Skills & Tools
+              {t('techStack.additionalSkills')}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {[
-                "JavaScript", "Python", "Redux", "GraphQL", "Socket.io", "JWT",
-                "Bcrypt", "Nodemailer", "Cloudinary", "Stripe", "Jest", "Cypress",
-                "Postman", "VS Code", "GitHub", "Netlify", "Heroku", "Firebase"
+                "JavaScript", "PHP", "Liquid", "JWT", "Bcrypt", "ACF",
+                "Gutenberg", "Schema.org", "Leaflet.js", "Sharp", "Stripe",
+                "WhatsApp API", "Git", "Nginx", "Figma", "Radix UI"
               ].map((skill) => (
                 <div
                   key={skill}
@@ -200,16 +200,16 @@ const TechStack = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                {t('techStack.alwaysLearning.kubernetes')}
+                {t('techStack.alwaysLearning.tech1')}
               </span>
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                {t('techStack.alwaysLearning.machineLearning')}
+                {t('techStack.alwaysLearning.tech2')}
               </span>
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                {t('techStack.alwaysLearning.microservices')}
+                {t('techStack.alwaysLearning.tech3')}
               </span>
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                {t('techStack.alwaysLearning.web3')}
+                {t('techStack.alwaysLearning.tech4')}
               </span>
             </div>
           </div>

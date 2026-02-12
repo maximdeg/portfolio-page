@@ -23,7 +23,7 @@ const Hero = () => {
               textVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'
             }`}
           >
-            <div className="space-y-4">
+            <div className="space-y-4 md:mt-12">
               <p className="text-lg md:text-xl text-orange-600 dark:text-orange-400 font-medium">
                 {t('hero.greeting')}
               </p>
