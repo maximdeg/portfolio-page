@@ -2,7 +2,6 @@ import "./globals.css";
 import { Oxanium } from "next/font/google";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import Head from "next/head";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const oxaniumFont = Oxanium({
@@ -11,8 +10,10 @@ const oxaniumFont = Oxanium({
 });
 
 export const metadata: Metadata = {
-  title: "Maxim Degtiarev | Portfolio",
-  description: "Software Developer | Web Designer",
+  title: "Maxim Degtiarev | Full-Stack Web Developer",
+  description:
+    "Full-stack web developer with 4+ years building production apps with Next.js, React, TypeScript and Node.js — booking platforms, online stores, subscription products, Shopify and WordPress.",
+  robots: "all",
 };
 
 export default function RootLayout({
@@ -22,11 +23,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <title>Maxim Degtiarev | Portfolio</title>
-        <meta name="robots" content="all" />
-        <meta name="description" content="" key="desc" />
-      </Head>
       <body className={oxaniumFont.className}>
         <LanguageProvider>
           {children}

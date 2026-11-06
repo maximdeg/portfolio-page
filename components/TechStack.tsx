@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { HiDatabase, HiCloud, HiGlobe } from "react-icons/hi";
+import { HiDatabase, HiCloud, HiGlobe, HiBeaker } from "react-icons/hi";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -19,14 +19,14 @@ const TechStack = () => {
       { name: "React", level: 90, color: "#61DAFB" },
       { name: "TypeScript", level: 85, color: "#3178C6" },
       { name: "Tailwind CSS", level: 88, color: "#06B6D4" },
-      { name: "Framer Motion", level: 80, color: "#BB4BE9" },
+      { name: "React Router 7", level: 80, color: "#CA4245" },
     ],
     [t('techStack.backend')]: [
       { name: "Node.js", level: 88, color: "#339933" },
       { name: "Express.js", level: 85, color: "#000000" },
       { name: "PostgreSQL", level: 82, color: "#336791" },
-      { name: "MongoDB", level: 80, color: "#47A248" },
-      { name: "Redis", level: 75, color: "#DC382D" },
+      { name: "MongoDB", level: 82, color: "#47A248" },
+      { name: "Supabase", level: 78, color: "#3ECF8E" },
     ],
     [t('techStack.tools')]: [
       { name: "Shopify", level: 85, color: "#96BF48" },
@@ -34,6 +34,13 @@ const TechStack = () => {
       { name: "Docker", level: 75, color: "#2496ED" },
       { name: "Vercel", level: 88, color: "#000000" },
       { name: "Cloudinary", level: 80, color: "#3448C5" },
+    ],
+    [t('techStack.testing')]: [
+      { name: "Vitest", level: 82, color: "#6E9F18" },
+      { name: "Playwright", level: 75, color: "#2EAD33" },
+      { name: "Testing Library", level: 78, color: "#E33332" },
+      { name: "Claude Code", level: 85, color: "#D97757" },
+      { name: "Git & GitHub PRs", level: 88, color: "#F05032" },
     ]
   };
 
@@ -55,6 +62,12 @@ const TechStack = () => {
       icon: <HiCloud className="w-8 h-8" />,
       description: t('techStack.category3.description'),
       color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: t('techStack.category4.title'),
+      icon: <HiBeaker className="w-8 h-8" />,
+      description: t('techStack.category4.description'),
+      color: "from-orange-500 to-amber-500"
     }
   ];
 
@@ -78,7 +91,7 @@ const TechStack = () => {
         {/* Technology Categories */}
         <div 
           ref={categoriesRef}
-          className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 ${
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 ${
             categoriesVisible ? 'scroll-stagger visible' : 'scroll-stagger'
           }`}
         >
@@ -167,9 +180,10 @@ const TechStack = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {[
-                "JavaScript", "PHP", "Liquid", "JWT", "Bcrypt", "ACF",
-                "Gutenberg", "Schema.org", "Leaflet.js", "Sharp", "Stripe",
-                "WhatsApp API", "Git", "Nginx", "Figma", "Radix UI"
+                "JavaScript", "PHP", "Liquid", "Effect", "Drizzle ORM", "NextAuth",
+                "Zod", "Redux", "Stripe", "Mercado Pago", "WhatsApp Cloud API", "Nodemailer",
+                "JWT", "ACF", "Gutenberg", "Schema.org", "Leaflet.js", "Sharp",
+                "Radix UI", "Figma", "Docker", "Git", "Postman", "Jira"
               ].map((skill) => (
                 <div
                   key={skill}

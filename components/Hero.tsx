@@ -57,16 +57,16 @@ const Hero = () => {
             {/* Stats */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-8 pt-8">
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-400">3+</div>
+                <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-400">4+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{t('hero.yearsExperience')}</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-400">10+</div>
+                <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-400">12+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{t('hero.projectsCompleted')}</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-400">100%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">{t('hero.clientSatisfaction')}</div>
+                <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-400">2</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{t('hero.countries')}</div>
               </div>
             </div>
           </div>

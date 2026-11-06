@@ -15,103 +15,58 @@ const Portfolio = () => {
   const { elementRef: ctaRef, isVisible: ctaVisible } = useScrollAnimation<HTMLDivElement>();
   const { t } = useLanguage();
 
-  const works = [
-    {
-      title: t('works.proj1.title'),
-      subtitle: t('works.proj1.subtitle'),
-      description: t('works.proj1.description'),
-      image: "/proyect-1.png",
-      image_width: 600,
-      image_height: 400,
-      image_alt: "Next-Gen E-commerce",
-      link: "https://jm99-website.vercel.app/",
-      github: undefined,
-      category: "node",
-      tech: ["Next.js 15", "TypeScript", "Cloudinary", "IA APIs", "Tailwind CSS"],
-    },
-    {
-      title: t('works.proj2.title'),
-      subtitle: t('works.proj2.subtitle'),
-      description: t('works.proj2.description'),
-      image: "/proyect-2.png",
-      image_width: 600,
-      image_height: 400,
-      image_alt: "Healthcare Management SaaS",
-      link: "https://maxturnos.vercel.app/",
-      github: undefined,
-      category: "node",
-      tech: ["Next.js", "PostgreSQL", "Redis", "Node.js", "WhatsApp API"],
-    },
-    {
-      title: t('works.proj3.title'),
-      subtitle: t('works.proj3.subtitle'),
-      description: t('works.proj3.description'),
-      image: "/proyect-3.png",
-      image_width: 600,
-      image_height: 400,
-      image_alt: "Enterprise Booking Engine",
-      link: undefined,
-      github: undefined,
-      category: "node",
-      tech: ["Node.js", "Express", "MongoDB", "Leaflet.js", "Sharp"],
-    },
-    {
-      title: t('works.proj4.title'),
-      subtitle: t('works.proj4.subtitle'),
-      description: t('works.proj4.description'),
-      image: "/proyect-4.png",
-      image_width: 600,
-      image_height: 400,
-      image_alt: "Author E-commerce - Lightworker",
-      link: "https://lightworkeronduty.com/",
-      github: undefined,
-      category: "shopify",
-      tech: ["Shopify Liquid", "JavaScript ES6+", "SEO Técnico"],
-    },
-    {
-      title: t('works.proj5.title'),
-      subtitle: t('works.proj5.subtitle'),
-      description: t('works.proj5.description'),
-      image: "/proyect-5.png",
-      image_width: 600,
-      image_height: 400,
-      image_alt: "Dance Sport Institutional Ecosystem",
-      link: "https://aabd.online/",
-      github: undefined,
-      category: "wordpress",
-      tech: ["WordPress", "Custom PHP", "Gutenberg Blocks", "Schema.org"],
-    },
-    {
-      title: t('works.proj6.title'),
-      subtitle: t('works.proj6.subtitle'),
-      description: t('works.proj6.description'),
-      image: "/proyect-6.png",
-      image_width: 600,
-      image_height: 400,
-      image_alt: "Specialty Platform",
-      link: "https://heartsonghealingarts.net/",
-      github: undefined,
-      category: "wordpress",
-      tech: ["WordPress", "PHP 7.4+", "ACF Pro", "Vanilla JS"],
-    },
-    {
-      title: t('works.proj7.title'),
-      subtitle: t('works.proj7.subtitle'),
-      description: t('works.proj7.description'),
-      image: "/proyect-7.png",
-      image_width: 600,
-      image_height: 400,
-      image_alt: "Conversion Funnel",
-      link: "https://the-real-expert-website.vercel.app/",
-      github: undefined,
-      category: "node",
-      tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
-    },
+  type Category = "webapps" | "sites" | "wordpress" | "shopify";
+  type Badge = "inProgress" | "personal";
+
+  // Ordered by what a client or recruiter should see first.
+  const projects: {
+    key: string;
+    image: string;
+    alt: string;
+    link?: string;
+    github?: string;
+    category: Category;
+    badge?: Badge;
+    tech: string[];
+  }[] = [
+    { key: "proj2", image: "/proyect-2.png", alt: "Dermatology booking platform", link: "https://maxturnos.vercel.app/", category: "webapps",
+      tech: ["Next.js 15", "TypeScript", "NextAuth v5", "MongoDB", "WhatsApp Cloud API", "Vitest", "Playwright"] },
+    { key: "proj8", image: "/proyect-8.png", alt: "Video course streaming platform", link: "https://dancetothemax.vercel.app/", category: "webapps", badge: "inProgress",
+      tech: ["React Router 7", "Effect", "PostgreSQL", "Drizzle", "Stripe", "Vitest", "Next.js 16"] },
+    { key: "proj9", image: "/proyect-9.png", alt: "Luz Roja Contenidos website and store", link: "https://luzrojacontenidos.com/", category: "webapps",
+      tech: ["Next.js 15", "Supabase", "Mercado Pago", "Nodemailer", "Vitest"] },
+    { key: "proj1", image: "/proyect-1.png", alt: "JM99 e-commerce", link: "https://jm99-website.vercel.app/", category: "webapps",
+      tech: ["Next.js 15", "TypeScript", "Cloudinary", "Claid AI API", "Tailwind CSS"] },
+    { key: "proj4", image: "/proyect-4.png", alt: "Lightworker On Duty Shopify store", link: "https://lightworkeronduty.com/", category: "shopify",
+      tech: ["Shopify Liquid", "JavaScript ES6+", "Technical SEO"] },
+    { key: "proj5", image: "/proyect-5.png", alt: "AABD sports federation platform", link: "https://aabd.online/", category: "wordpress",
+      tech: ["WordPress", "Custom PHP", "Gutenberg Blocks", "Schema.org"] },
+    { key: "proj6", image: "/proyect-6.png", alt: "Heartsong Healing Arts website", link: "https://heartsonghealingarts.net/", category: "wordpress",
+      tech: ["WordPress", "PHP 7.4+", "ACF Pro", "Vanilla JS"] },
+    { key: "proj7", image: "/proyect-7.png", alt: "Real Expert landing page", link: "https://the-real-expert-website.vercel.app/", category: "sites",
+      tech: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"] },
+    { key: "proj10", image: "/proyect-10.png", alt: "Simply Healthy Marketing landing", link: "https://simplyhealthymarketing.com/", category: "sites",
+      tech: ["HTML5", "CSS3", "Vanilla JS", "Flodesk", "Calendly"] },
+    { key: "proj11", image: "/proyect-11.png", alt: "Calenda Real Estate Group website", link: "https://calendagroup.com/", category: "sites",
+      tech: ["HTML5", "CSS Grid", "Responsive design"] },
+    { key: "proj12", image: "/proyect-12.png", alt: "Ryan Ginn therapy website", link: "https://ryanginn.com/", category: "wordpress",
+      tech: ["WordPress", "Pro theme", "Yoast SEO", "Performance"] },
+    { key: "proj3", image: "/proyect-3.png", alt: "Natourex tour booking API", category: "webapps", badge: "personal",
+      tech: ["Node.js", "Express", "MongoDB", "Leaflet.js", "JWT", "Sharp"] },
   ];
+
+  const works = projects.map((p) => ({
+    ...p,
+    title: t(`works.${p.key}.title`),
+    subtitle: t(`works.${p.key}.subtitle`),
+    description: t(`works.${p.key}.description`),
+    badgeLabel: p.badge ? t(`portfolio.badge.${p.badge}`) : undefined,
+  }));
 
   const filters = [
     { id: "all", label: t('portfolio.filter.all') },
-    { id: "node", label: t('portfolio.filter.node') },
+    { id: "webapps", label: t('portfolio.filter.webapps') },
+    { id: "sites", label: t('portfolio.filter.sites') },
     { id: "wordpress", label: t('portfolio.filter.wordpress') },
     { id: "shopify", label: t('portfolio.filter.shopify') },
   ];
@@ -176,10 +131,15 @@ const Portfolio = () => {
                 <Image
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   src={work.image}
-                  alt={work.image_alt}
-                  width={work.image_width}
-                  height={work.image_height}
+                  alt={work.alt}
+                  width={600}
+                  height={400}
                 />
+                {work.badgeLabel && (
+                  <span className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-xs font-semibold bg-white/90 text-gray-900 dark:bg-gray-900/90 dark:text-white shadow">
+                    {work.badgeLabel}
+                  </span>
+                )}
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   {work.link && (
